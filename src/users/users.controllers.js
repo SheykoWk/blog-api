@@ -30,7 +30,6 @@ const createUser = async (obj) => {
     return data
 }
 
-
 module.exports = {
     findAllUsers,
     findUserById,
