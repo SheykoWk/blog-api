@@ -30,8 +30,18 @@ const createUser = async (obj) => {
     return data
 }
 
+const findUserByEmail = async (email) => {
+    const data = await Users.findOne({
+        where: {
+            email: email
+        }
+    })
+    return data 
+}
+
 module.exports = {
     findAllUsers,
     findUserById,
-    createUser
+    createUser,
+    findUserByEmail
 }
