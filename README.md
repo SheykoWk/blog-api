@@ -9,8 +9,8 @@
 - Likes
 
 ## Auth 
-- Sign up /auth/register
-- Login /auth/login
+- Sign up /api/v1/auth/register
+- Login /api/v1/auth/login
 
 microservicios
     - auth0
