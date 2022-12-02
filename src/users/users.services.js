@@ -1,6 +1,9 @@
 const userControllers = require('./users.controllers')
 
 const getAllUsers = (req, res) => {
+
+    console.log('Este es mi req.user:',req.user)
+
     userControllers.findAllUsers()
         .then((data) => {
             res.status(200).json(data)
