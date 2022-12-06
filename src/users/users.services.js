@@ -84,10 +84,26 @@ const deleteUser = (req, res) => {
         })
 }
 
+
+//? /api/v1/users/me
+const getMyUser = (req, res) => {
+    const id = req.user.id //? Es obligatorio que la ruta este protegida para acceder a este valor
+
+    userControllers.findUserById(id)
+        .then((data) => {
+            res.status(200).json(data)
+        })
+        .catch((err) => {
+            res.status(400).json({message: err.message})
+        })
+}
+
+
 module.exports = {
     getAllUsers,
     getUserById,
     postUser,
     patchUser,
-    deleteUser
+    deleteUser,
+    getMyUser
 }
