@@ -42,6 +42,12 @@ const Users = db.define('users', {
     country: {
         type: DataTypes.STRING(3)
     }
+    /*
+    status: {
+        type: DataTypes.STRING()
+        defaultValue: 'active'
+    }
+    */
 })
 
 

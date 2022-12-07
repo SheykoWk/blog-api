@@ -110,6 +110,17 @@ const patchMyUser = (req, res) => {
         })
 }
 
+const deleteMyUser = (req, res) => {
+    const id = req.user.id 
+    userControllers.deleteUser(id)
+        .then((data) => {
+            res.status(204).json()
+        })
+        .catch((err) => {
+            res.status(400).json({message: err.message})
+        })
+}
+
 module.exports = {
     getAllUsers,
     getUserById,
@@ -117,5 +128,6 @@ module.exports = {
     patchUser,
     deleteUser,
     getMyUser,
-    patchMyUser
+    patchMyUser,
+    deleteMyUser
 }
