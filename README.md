@@ -16,3 +16,25 @@ microservicios
     - auth0
     - redis
 arquitectura hexagonal
+
+categories
+
+/api/v1/categories
+    - tutorial
+    - español
+    - backend
+    - frontend
+    - devops
+    - cloud
+
+posts
+
+/api/v1/posts 
+
+
+/api/v1/users/me
+
+/api/v1/users/me/posts
+
+
+
